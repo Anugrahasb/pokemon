@@ -386,7 +386,10 @@ fun PokemonBaseStat(
             it.base_stat
         }
     }
-    Column(modifier = Modifier.fillMaxWidth()) {
+    Column(modifier = Modifier
+        .fillMaxWidth()
+        .padding(16.dp)
+    ) {
         Text(
             text = "Base stats:",
             fontSize = 20.sp,

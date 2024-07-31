@@ -71,16 +71,17 @@ fun PokemonListScreen(
                 contentDescription = "",
                 modifier = Modifier
                     .fillMaxWidth()
+                    .padding(16.dp)
                     .align(Alignment.CenterHorizontally)
             )
             SearchBar(
                 hint = "Search...", modifier = Modifier
                     .fillMaxWidth()
-                    .padding(16.dp)
+                    .padding(horizontal = 16.dp)
             ) {
                 viewmodel.searchPokemonList(it)
             }
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             PokemonLists(navController = navController)
 
         }
@@ -114,7 +115,7 @@ fun SearchBar(
                 .fillMaxWidth()
                 .shadow(5.dp, CircleShape)
                 .background(color = Color.White, CircleShape)
-                .padding(horizontal = 20.dp, vertical = 12.dp)
+                .padding(horizontal = 16.dp, vertical = 16.dp)
                 .onFocusChanged {
                     isHintDisplayed = !it.isFocused
                 }
@@ -227,7 +228,8 @@ fun PokemonEntry(
             )
 
             if (isLoading) {
-                CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally))
+                CircularProgressIndicator(modifier = Modifier.
+                align(Alignment.CenterHorizontally))
             }
 
             Text(
