@@ -2,4 +2,4 @@ App Name: Pokemon
 
 Download or Access the App
 
-You can access the app here. : https://drive.google.com/file/d/1jQi9OchDml7VMth4KXrT82-wkdZ23a7W/view?usp=drive_link
+You can access the app here. : https://drive.google.com/drive/folders/1NxwJ49zL-6ip2Fk7zMpn5JhlDQLTdWxW?usp=sharing
