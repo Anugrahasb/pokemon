@@ -15,14 +15,16 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    @Provides
+    @Singleton
+    fun providePokemonRepository(api: PokeApi): PokemonRepository {
+        return PokemonRepository(api)
+    }
+
     @Singleton
     @Provides
-    fun providePokemonRepository(
-        api: PokeApi
-    ) = PokemonRepository(api)
-
-    fun providePokeApi(): PokeApi{
-        return  Retrofit.Builder()
+    fun providePokeApi(): PokeApi {
+        return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
             .build()
